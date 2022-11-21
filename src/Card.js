@@ -4,8 +4,6 @@ import { useState } from 'react'
 
 function Card(props) {
 
-  const [aggText, setAggText] = useState("Add to List")
-
   return (
     <div className="card">
       <img src={props.image}></img>

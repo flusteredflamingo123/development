@@ -77,9 +77,10 @@ function App() {
           <Menu letters={['Q','U','I','C','K','E','N'].sort()} filter={filterWords} sort={setSortType} reset={reset} aggregated={aggregated} aggregatedScore={aggregated.reduce((prev, curr) => (prev + calculatePoints(curr)), 0)}/>
         </div>
         <div id="cards">
+          {/* <Card word="quicken" image={require('./images/quicken.jpg')} score={calculatePoints("quicken")} aggregate={() => aggregate("quicken")} aggregated={aggregated.includes("quicken")}></Card> */}
           {shownWords.map((word, index) => (
-            // <Card word={word} image={require('./images/' + word.toLowerCase() + '.png')} score={calculatePoints} key={index}></Card>
-            <Card word={word} image={require('./images/word.png')} score={calculatePoints(word)} aggregate={() => aggregate(word)} aggregated={aggregated.includes(word)} key={index}></Card>
+            // <Card word={word} image={require('./images/' + word.toLowerCase() + '.jpg')} score={calculatePoints(word)} key={index}></Card>
+            <Card word={word} image={require('./images/' + word.toLowerCase() + '.jpg')} score={calculatePoints(word)} aggregate={() => aggregate(word)} aggregated={aggregated.includes(word)} key={index}></Card>
           ))}
 
         </div>
